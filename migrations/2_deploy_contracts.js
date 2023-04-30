@@ -1,8 +1,7 @@
-const ConvertLib = artifacts.require("ConvertLib");
-const MetaCoin = artifacts.require("MetaCoin");
+const ERC20Token = artifacts.require("ERC20Token.sol");
+const SupplyChain = artifacts.require("SupplyChain.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(MetaCoin);
+  deployer.deploy(ERC20Token, 10000, "TotalSem Token", 18, "TotalSem");
+  deployer.deploy(SupplyChain);
 };
