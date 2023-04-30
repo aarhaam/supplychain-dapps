@@ -9,9 +9,9 @@ module.exports = {
       network_id: "*", // Match any network id
       gas: 5000000
     },
-    goerli: {
+    sepolia: {
       provider: function (){
-        return new HDWalletProvider(mnemonic, "https://goerli.infura.io/v3/f18bc77518044970a6485bc5a14e89c2");
+        return new HDWalletProvider(mnemonic, "https://sepolia.infura.io/v3/f18bc77518044970a6485bc5a14e89c2");
       },
       network_id: 5,
       gas: 4500000,
